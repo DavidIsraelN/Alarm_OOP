@@ -11,7 +11,6 @@ using std::setfill;
 using std::setw;
 using std::cin;
 using std::cout;
-using std::endl;
 
 
 enum TIME_TYPE { UNIVERSAL, STANDARD };
