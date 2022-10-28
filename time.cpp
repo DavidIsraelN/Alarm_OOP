@@ -52,8 +52,6 @@ void Time::printUniversal()
   cout << setfill('0') << setw(2) << m_hour << ":"
     << setw(2) << m_minute << ":"
     << setw(2) << m_second;
-  cout << '\r' << std::flush;
-
 }
 
 /*---------------------------------------
@@ -65,7 +63,6 @@ void Time::printStandard()
     << ":" << setfill('0') << setw(2) << m_minute
     << ":" << setw(2) << m_second
     << (m_hour < 12 ? " AM" : " PM");
-  cout << '\r' << std::flush;
 }
 
 /*---------------------------------------
