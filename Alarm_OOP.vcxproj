@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Alarm_OOP_main.cpp" />
+    <ClCompile Include="alarm_OOP_main.cpp" />
     <ClCompile Include="alarm.cpp" />
     <ClCompile Include="time.cpp" />
   </ItemGroup>

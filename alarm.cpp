@@ -3,30 +3,24 @@
 
 #include "alarm.h"
 
-
-
 /*---------------------------------------
-
+set hour, minute, second for real time
 */
 void Alarm::setRealTime(int h, int m, int s)
 {
   m_real_time.setTime(h, m, s);
 }
 
-
-
 /*---------------------------------------
-
+set hour, minute, second for alarm time
 */
 void Alarm::setAlarmTime(int h, int m, int s)
 {
   m_alarm_time.setTime(h, m, s);
 }
 
-
-
 /*---------------------------------------
-
+set the format for the alarm clock
 */
 void Alarm::setAlarmType(int t)
 {
@@ -34,31 +28,16 @@ void Alarm::setAlarmType(int t)
   m_alarm_time.setType(t);
 }
 
-
 /*---------------------------------------
-
+tick real time by a second
 */
-bool Alarm::alarmTime()
+void Alarm::tickRealTime()
 {
-  return m_real_time.sameTime(m_alarm_time);
+  m_real_time.tick();
 }
 
-
-
 /*---------------------------------------
-
-*/
-void Alarm::beepAlarm()
-{
-  cout << endl;
-  cout << '\a' << "WAKE UP!!" << '\a' << endl;
-  m_real_time.print();
-  cout << endl;
-}
-
-
-/*---------------------------------------
-
+print real and alarm time
 */
 void Alarm::printAlarm()
 {
@@ -71,9 +50,20 @@ void Alarm::printAlarm()
 }
 
 /*---------------------------------------
-
+check if it's alarm time
 */
-void Alarm::tickRealTime()
+bool Alarm::alarmTime()
 {
-  m_real_time.tick();
+  return m_real_time.sameTime(m_alarm_time);
+}
+
+/*---------------------------------------
+ringing
+*/
+void Alarm::beepAlarm()
+{
+  cout << endl;
+  cout << '\a' << "WAKE UP!!" << '\a' << endl;
+  m_real_time.print();
+  cout << endl;
 }
