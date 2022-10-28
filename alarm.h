@@ -3,32 +3,27 @@
 
 #pragma once
 
-#include <iostream>
-#include <iomanip>
-#include <chrono>
-#include <thread>
-#include <time.h>
 #include "time.h"
+#include <iostream>
 
-using std::cin;
 using std::cout;
 using std::endl;
-// using std::flush;
-using std::setfill;
-using std::setw; // Alarm clock program in OOP paradigm
+
+// Alarm abstract data type (ADT) definition:
 
 class Alarm {
 
 public:
-  void setRealTime(int, int, int);
-  void setAlarmTime(int, int, int);
-  void setAlarmType(int);
-  void tickRealTime();
-  void printAlarm();
-  bool alarmTime();
-  void beepAlarm();
+  void setRealTime(int, int, int);    // set hour, minute, second for real time
+  void setAlarmTime(int, int, int);   // set hour, minute, second for alarm
+  void setAlarmType(int);             // set format of the clocks
+  void tickRealTime();                // tick real time by a second
+  void printAlarm();                  // print real and alarm time
+  bool alarmTime();                   // check if it's alarm time
+  void beepAlarm();                   // ringing
 
 private:
-  Time m_real_time;
-  Time m_alarm_time;
-};
+  Time m_real_time;                   // real time
+  Time m_alarm_time;                  // alarm time
+
+}; // end class Alarm
