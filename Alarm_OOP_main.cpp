@@ -1,6 +1,7 @@
 //************* main.cpp file ***************
 
 #include "alarm.h"
+#include <iostream>
 #include <thread>
 #include <chrono>
 
