@@ -2,6 +2,10 @@
 //************* alarm.cpp file *************
 
 #include "alarm.h"
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 /*---------------------------------------
 set hour, minute, second for real time

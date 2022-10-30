@@ -2,6 +2,12 @@
 //************* time.cpp file *************
 
 #include "time.h"
+#include <iostream>
+#include <iomanip>
+
+using std::cout;
+using std::setfill;
+using std::setw;
 
 /*---------------------------------------
 Time constructor initializes each data member to zero

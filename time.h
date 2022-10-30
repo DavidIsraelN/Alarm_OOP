@@ -3,13 +3,6 @@
 
 #pragma once
 
-#include <iostream>
-#include <iomanip>
-
-using std::cout;
-using std::setfill;
-using std::setw;
-
 enum TIME_TYPE {UNIVERSAL, STANDARD};
 
 // Time abstract data type (ADT) definition:

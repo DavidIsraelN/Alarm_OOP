@@ -4,10 +4,6 @@
 #pragma once
 
 #include "time.h"
-#include <iostream>
-
-using std::cout;
-using std::endl;
 
 // Alarm abstract data type (ADT) definition:
 
